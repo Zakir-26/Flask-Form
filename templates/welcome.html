@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %} welcome page {% endblock %}
+
+
+
+{% block content %}
+<h1>Welcome to dashboard. </h1>
+
+{% with messages = get_flashed_messages() %}
+
+{% if messages %}
+
+{% for msg in messages %}
+
+<p style="font-size: 38px; font-weight: 60; color: green;"> {{ msg }}</p>
+
+{% endfor %}
+
+{% endif %}
+
+{% endwith %}
+
+{% endblock %}
